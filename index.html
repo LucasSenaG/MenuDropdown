@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="menu">
+        <div id="logo">
+            <img src="assets/imagens/logo.svg" alt="Logo">
+        </div>
+        <div id="opcoes">
+            <div class="submenus negrito" onmouseover="exibemenu('features')" onmouseout="escondemenu('features')">
+                <p>Features</p>
+                <img src="assets/imagens/icon-arrow-down.svg">
+                <div class="dropdowns" id="features">
+                    <div class="conteudodropdown">
+                        <div class="linhamenu">
+                            <img src="assets/imagens/icon-todo.svg">
+                            <span>Todo list</span>
+                        </div>
+                        <div class="linhamenu">
+                            <img src="assets/imagens/icon-calendar.svg">
+                            <span>Calendar</span>
+                        </div>
+                        <div class="linhamenu">
+                            <img src="assets/imagens/icon-reminders.svg">
+                            <span>Reminders</span>
+                        </div>
+                        <div class="linhamenu">
+                            <img src="assets/imagens/icon-planning.svg">
+                            <span>Planing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="submenus negrito" onmouseover="exibemenu('company')" onmouseout="escondemenu('company')">
+                <p>Company</p>
+                <img src="assets/imagens/icon-arrow-down.svg">
+                <div class="dropdowns" id="company">
+                    <div class="linhamenu">
+                        <span>History</span>
+                    </div>
+                    <div class="linhamenu">
+                        <span>Our Team</span>
+                    </div>
+                    <div class="linhamenu">
+                        <span>Blog</span>
+                    </div>
+                </div>
+            </div>
+            <div class="negrito">
+                <p>Careers</p>
+            </div>
+            <div class="negrito">
+                <p class="negrito">About</p>
+            </div>
+        </div>
+        <div id="login">
+            <div class="botao">
+                <input type="button" value="Login">
+                <input type="button" value="Register">
+            </div>
+        </div>
+        <div class="mobile" onclick="abremenumobile()">
+            <img src="https://cdn-icons-png.flaticon.com/512/4294/4294414.png">
+        </div>
+    </div>
+    <div id="pagina">
+        <div class="coluna" id="col1">
+            <div class="conteudo">
+                <div id="titulo">
+                    <h1>Make</h1>
+                    <h1>remote work</h1>
+                </div>
+                <div class="texto">
+                    <span>Get your team in sync, no matter your location.</span>
+                    <span>Streamline processes, create team rituals, and</span>
+                    <span>watch productivity soar.</span>
+                </div>
+                <div class="btn">
+                    <input type="button" value="Learn more">
+                </div>
+                <div class="clientes">
+                    <img src="assets/imagens/client-databiz.svg">
+                    <img src="assets/imagens/client-audiophile.svg">
+                    <img src="assets/imagens/client-maker.svg">
+                    <img src="assets/imagens/client-meet.svg">
+                </div>
+            </div>
+        </div>
+        <div class="coluna" id="col2">
+            <img src="assets/imagens/image-hero-desktop.png">
+        </div>
+        <!-- INICÍO ESTRUTURA MOBILE -->
+    </div>
+    <div id="pagina-mb">
+        <div class="imginicio">
+            <img src="assets/imagens/image-hero-mobile.png">
+        </div>
+        <div class="texto-mb">
+            <div class="titulo-mb">
+                <h1>Make remote work</h1>
+            </div>
+            <div class="escrita-mb">
+                <p>Get your team in sync, no matter your location.</p>
+                <p>Streamline processes, create team rituals, and</p>
+                <p>watch productivity soar.</p>
+            </div>
+        </div>
+        <div class="btn-mb">
+            <input type="button" value="Learn More">
+        </div>
+        <div class="clientes-mb">
+            <img src="assets/imagens/client-databiz.svg">
+            <img src="assets/imagens/client-audiophile.svg">
+            <img src="assets/imagens/client-meet.svg">
+            <img src="assets/imagens/client-maker.svg">
+        </div>
+    </div>
+    <div id="menu-mb">
+        <div class="btnfecha" onclick="fechamenumobile()">
+            <img src="assets/imagens/icon-close-menu.svg">
+        </div>
+        <div id="itensmenu">
+            <div class="submenu-mb linhamenu-mb" onclick="acaomenumoblie('#features-mb')">
+                <p>Features</p>
+                <img src="assets/imagens/icon-arrow-down.svg" class="iconeabre">
+                <img src="assets/imagens/icon-arrow-up.svg" class="iconefecha">
+            </div>
+            <div class="dropdown-mb" id="features-mb">
+                <div class="linhamenu">
+                    <img src="assets/imagens/icon-todo.svg">
+                    <span>Todo list</span>
+                </div>
+                <div class="linhamenu">
+                    <img src="assets/imagens/icon-calendar.svg">
+                    <span>Calendar</span>
+                </div>
+                <div class="linhamenu">
+                    <img src="assets/imagens/icon-reminders.svg">
+                    <span>Reminders</span>
+                </div>
+                <div class="linhamenu">
+                    <img src="assets/imagens/icon-planning.svg">
+                    <span>Planing</span>
+                </div>
+
+            </div>
+            <div class="submenu-mb linhamenu-mb" onclick="acaomenumoblie('#company-mb')">
+                <p>Company</p>
+                <img src="assets/imagens/icon-arrow-down.svg" class="iconeabre">
+                <img src="assets/imagens/icon-arrow-up.svg" class="iconefecha">
+            </div>
+            <div class="dropdown-mb" id="company-mb">
+                <div class="linhamenu">
+                    <span>History</span>
+                </div>
+                <div class="linhamenu">
+                    <span>Our Team</span>
+                </div>
+                <div class="linhamenu">
+                    <span>Blog</span>
+                </div>
+            </div>
+            <div class="linhamenu-mb">
+                <p>Careers</p>
+            </div>
+            <div class="linhamenu-mb">
+                <p>About</p>
+            </div>
+            <div id="login-mb">
+                <input type="button" value="Login">
+                <input type="button" value="Register">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

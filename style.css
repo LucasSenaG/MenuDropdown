@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+body {
+    background-color: #fafafa;
+}
+
+/* INÍCIO - ESTILIZAÇÃO DO MENU */
+
+#menu {
+    display: flex;
+    height: 12vh;
+    align-items: center;
+    margin: 0 10px;
+}
+
+#menu #logo {
+    margin: 0 30px;
+}
+
+#menu #opcoes {
+    display: flex;
+    width: 50vw;
+    justify-content: space-around;
+}
+
+#menu .submenus {
+    cursor: pointer;
+    display: flex;
+}
+
+#menu #opcoes .negrito p:hover {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#menu #opcoes .submenus img {
+    width: 13px;
+    height: 13px;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu #opcoes .submenus .dropdowns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 7.5vh;
+    padding: 12px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    -webkit-box-shadow: 10px 10px 95px -17px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 95px -17px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 95px -17px rgba(0, 0, 0, 0.75);
+}
+
+
+#menu #opcoes .submenus .dropdowns .conteudodropdown {
+    width: max-content;
+}
+
+#menu #opcoes .submenus .dropdowns .linhamenu {
+    width: 100%;
+    margin: 12px 0px;
+}
+
+#menu #opcoes #features {
+    display: none;
+    flex-direction: column;
+    width: 9vw;
+    left: 9vw;
+}
+
+#menu #opcoes #features .linhamenu {
+    display: flex;
+    width: 100%;
+}
+
+#menu #opcoes #features .linhamenu span {
+    margin-left: 15px;
+}
+
+#menu #opcoes #company {
+    display: none;
+    flex-direction: column;
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+#menu #login {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+#menu #login .botao input {
+    padding: 8px 18px;
+    margin: 0px 18px;
+    background: none;
+    cursor: pointer;
+}
+
+#menu #login .botao input:hover {
+    font-weight: bold;
+}
+
+#menu #login input:last-child {
+    border: solid 1px black;
+    border-radius: 10px;
+    margin-right: 0px;
+
+}
+
+/* Fade para menus */
+.submenus:hover .dropdowns {
+    display: block;
+    opacity: 0;
+    -webkit-animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s;
+    -ms-animation: fadein 0.5s;
+    -o-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+    opacity: 1;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Opera */
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.mobile {
+    display: none;
+}
+
+/* FIM - ESTILIZAÇÃO DO MENU */
+/* INICIO - ESTILIZAÇÃO DA PÁGINA */
+
+#pagina {
+    display: flex;
+    height: 80vh;
+}
+
+#pagina .coluna {
+    width: 50vw;
+}
+
+/* INÍCIO - ESTILIZAÇÃO COLUNA 1 */
+
+#pagina #col1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pagina .conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 70%;
+    margin-left: 100px;
+}
+
+#pagina #col1 #titulo h1 {
+    font-size: 60px;
+    margin-bottom: -20px;
+}
+
+#pagina #col1 .texto {
+    width: 80%;
+}
+
+#pagina #col1 .btn input {
+    background-color: #000000;
+    color: #fafafa;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 12px 25px;
+}
+
+#pagina #col1 .clientes img {
+    margin: 0px 5px;
+}
+
+#pagina #col1 .btn input:hover {
+    background-color: #fafafa;
+    color: #000000;
+    cursor: pointer;
+    border: 1px solid #000000;
+}
+
+/* FIM - ESTILIZAÇÃO COLUNA 1 */
+/* INÍCIO - ESTILIZAÇÃO COLUNA 2 */
+
+
+#pagina #col2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#pagina #col2 img {
+    object-fit: contain;
+    height: 99%;
+    width: 100%;
+}
+
+#pagina-mb {
+    display: none;
+}
+
+#menu-mb {
+    display: none;
+}
+
+/* FIM - ESTILIZAÇÃO COLUNA 2 */
+/* INÍCIO - ESTILIZAÇÃO PARA CELULAR */
+@media screen and (min-width: 300px) and (max-width: 768px) {
+    #menu {
+        height: 10vh;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #menu #logo {
+        margin: 0px;
+    }
+
+    #menu #opcoes {
+        display: none;
+    }
+
+    #menu #login {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        height: 4vh;
+        width: 4vh;
+    }
+
+    #pagina {
+        display: none;
+    }
+
+    #pagina-mb {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pagina-mb .imginicio {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 40%;
+    }
+
+    #pagina-mb .imginicio img {
+        object-fit: contain;
+        width: 90%;
+    }
+
+    #pagina-mb .texto-mb {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #pagina-mb .texto-mb .titulo-mb {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        margin-top: 4vh;
+        font-size: 22px;
+    }
+
+    #pagina-mb .texto-mb .escrita-mb {
+        width: 90vw;
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    #pagina-mb .btn-mb {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        margin-top: 3vh;
+    }
+
+    #pagina-mb .btn-mb input {
+        padding: 15px 35px;
+        background-color: #000000;
+        color: #fafafa;
+        border-radius: 15px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #pagina-mb .clientes-mb {
+        display: flex;
+        width: 100vw;
+        height: 10vh;
+        justify-content: center;
+        margin-top: 5vh;
+    }
+
+    #pagina-mb .clientes-mb img {
+        display: flex;
+        object-fit: contain;
+        margin: 0 5px;
+    }
+
+    #menu-mb {
+        display: none;
+        flex-direction: column;
+        width: 60vw;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: #fafafa;
+        -webkit-box-shadow: -12px 21px 143px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -12px 21px 143px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: -12px 21px 143px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    #menu-mb .btnfecha {
+        display: flex;
+        justify-content: flex-end;
+        margin: 20px;
+    }
+
+    #menu-mb #itensmenu {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
+        font-size: 20px;
+        width: 50vw;
+
+    }
+
+    #menu-mb #itensmenu .submenu-mb .iconefecha {
+        display: none;
+    }
+
+    #menu-mb #itensmenu .submenu-mb {
+        display: flex;
+    }
+
+    #menu-mb #itensmenu .submenu-mb img {
+        object-fit: contain;
+        margin-left: 10px;
+    }
+
+    #menu-mb #itensmenu .linhamenu-mb {
+        margin: 10px 0px;
+    }
+
+    #menu-mb #itensmenu .dropdown-mb {
+        /* display: none; */
+        flex-direction: column;
+        margin-left: 5vw;
+    }
+
+    #menu-mb #itensmenu #features-mb {
+        display: none;
+    }
+
+    #menu-mb #itensmenu #company-mb {
+        display: none;
+    }
+
+    #menu-mb #itensmenu .dropdown-mb .linhamenu {
+        margin-bottom: 10px;
+        margin: 5px;
+    }
+
+    #menu-mb #login-mb {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    #menu-mb #login-mb input {
+        font-size: 20px;
+        margin: 7px;
+    }
+
+    #menu-mb #login-mb input {
+        background: none;
+    }
+
+    #menu-mb #login-mb input:last-child {
+        border: 2px solid #000000;
+        border-radius: 8px;
+        padding: 10px 1px;
+    }
+
+}
+
+
+/* FIM - ESTILIZAÇÃO DA PÁGINA */
